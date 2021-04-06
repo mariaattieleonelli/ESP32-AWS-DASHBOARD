@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotic arm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class = "container">
+        <div class="row">
+            <div class="column-text">
+                <h1>Robotic arm</h1>
+                <p id = "model-id">210326-MA</p>
+                <div class="data-wrapper">
+                    <!--Battery indicator-->
+                    <div class="battery-level-indicator">
+                        <p id = "battery-indicator" class="percentage">90%</p>
+                        <p>Battery</p>
+                        <p>Level</p>
+                    </div>
+                    
+                    <!--Battery level-->
+                    <div class="battery-level-graphic-wrapper">
+                        <div class="battery-level-graphic">
+                            <div 
+                            id = "battery-indicator-graph"
+                            class="battery-level-graphic-inner">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Assembled parts-->
+                    <div>
+                        <p id = "parts-indicator" class="parts">3,000</p>
+                        <p>Assembled parts</p>
+                    </div>
+
+                </div>
+
+                <div class="buttons-wrapper">
+                    <button id = "on-button" class="button blue">Encender</button>
+                    <button id = "off-button" class="button red">Apagar</button>
+                </div>
+
+            </div>
+            <div class="column-loader" id = "loader"></div>
+        </div>
+
+        <div class="row row-chart" style="width: 80%;">
+            <canvas 
+            style = "width: 80%; margin-bottom: 100px;"
+            id="myChart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type = "module" src = "index.js"></script>
+    <script src = "visualizer.js"></script>
+    <script src = "data.js"></script>
+</body>
+</html>
